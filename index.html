@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Parceljs Boilerplates</title>
+</head>
+<body>
+
+    <div id="gymnasium-dict-wrapper" class="gymnasium-lookup">
+        <h2 class="gymnasium-lookup-header">Se hvordan dit lokale gymnasium er påvirket</h2>
+        <div class="gymnasium-lookup-label">Søg gymnasiets navn nedenfor</div>
+        <div
+            data-gymnasium-lookup="https://dr-json-data.s3.eu-west-1.amazonaws.com/c8476d528050dd4496dcde1660323d96-gymnasiebemanding-sheet1.json"
+            data-lookup-placeholder="fx Haderslev Katedralskole"
+            data-container="gymnasium-dict-wrapper"
+            data-tip="Det kan også være ord som 'Parlamentet', 'Euro' eller 'Traktat'">
+            <div data-lookup-about>
+                <h3>Om gymnasie-boksen</h3>
+                <p>Gymnasium-opslaget er lavet af Simone C. Møller, Mads Rafte Hein og Johs. Wehner.</p>
+            </div>
+
+        </div>
+    </div>
+    <script src="./src/script/index.js"></script>
+
+</body>
+</html>

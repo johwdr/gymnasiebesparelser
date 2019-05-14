@@ -1,0 +1,113 @@
+@import './boiler.scss';
+[data-gymnasium-lookup]{
+	margin:0px auto;
+	padding: 20px 10px 20px 10px;
+	@media only screen and (min-width: 768px){
+		padding: 20px 40px 20px 40px;
+		margin:0px auto 0px 0px;
+	}
+
+
+
+    font-family: gibsonRegular, Arial, sans-serif;
+    font-size: 22px;
+    line-height: 22px;
+    color:#878787;
+    input{
+        color:#878787;
+        font-family: gibsonRegular, Arial, sans-serif;
+        font-size: 22px;
+        height: 44px;
+        line-height: 44px;
+        padding: 1px 13px 0px 13px;
+        width:100%;
+        max-width: 600px;
+        display: block;
+        margin: 0 auto;
+        box-sizing: border-box;
+        border:#a5a5a5 solid 1px;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        background-position: calc(100% - 10px) center;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.7 19.7"><defs><style>.lup{fill:#075099;}</style></defs><title>Lup</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="lup" d="M19.7,18.3l-5.4-5.4A7.88,7.88,0,0,0,16,8a8,8,0,1,0-8,8,7.88,7.88,0,0,0,4.9-1.7l5.4,5.4ZM2,8a6,6,0,1,1,6,6A6,6,0,0,1,2,8Z"/></g></g></svg>');
+
+        &::placeholder{
+            color:#cacaca;
+            font-size: 0.8em;
+        }
+        &:focus{
+            outline:2px solid #a5a5a5;
+        }
+    }
+    .dict-tip {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    [data-lookup-about] {
+        display: none;
+        box-sizing: border-box;
+        padding: 10px;
+        &.dict-open {
+            display: flex;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+
+            flex-direction: column;
+            top: 0px;
+            left: 0px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .dict-info-link {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+        z-index: 20;
+    }
+    .dict-search-list-wrapper {
+        position:relative;
+        box-sizing: border-box;
+        border-top:none;
+        width:100%;
+        z-index:1000;
+        max-width: 600px;
+        margin: 0 auto;
+        .dict-search-list {
+            list-style-type: none;
+            margin:0;
+            padding: 0 0 0 0;
+            position: absolute;
+            width: 100%;
+
+        }
+        li{
+            background: #FFFFFF;
+            border-right:#a5a5a5 solid 1px;
+            border-left:#a5a5a5 solid 1px;
+            padding: 5px 5% 5px 5%;
+            margin:0;
+            cursor:pointer;
+            &:first-child{
+                padding: 10px 5% 5px 5%;
+            }
+            &:last-child{
+                border-bottom:#a5a5a5 solid 1px;
+                //padding: 5px 5% 10px 5%;
+            }
+            &.key-selected{
+                background: #dfdfdf;
+            }
+            &:hover{
+                background: #cccccc;
+            }
+            .highlight{
+                font-family: gibsonSemibold, "Arial Black", sans-serif;
+                color:#5a5a5a;
+            }
+        }
+    }
+}
