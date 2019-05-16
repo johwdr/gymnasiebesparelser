@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Parceljs Boilerplates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
+
 <body>
-    <div id="ep-dict-wrapper" class="ep-dictionary">
-        <h2 class="ep-dictionary-header">Ordbog for valget til Europa-parlamentet</h2>
-        <div class="ep-dictionary-label">Søg på EU-ord nedenfor</div>
-        <div
-            data-lookup-dictionary="https://dr-json-data.s3.eu-west-1.amazonaws.com/9e3873f4303373167a72bda8df961d6f-sheet1.json"
-            data-lookup-placeholder="fx Kommisær"
-            data-container="ep-dict-wrapper"
-            data-tip="Det kan også være ord som 'Parlamentet', 'Euro' eller 'Traktat'">
+
+    <div id="gymnasium-dict-wrapper" class="gymnasium-lookup">
+        <h2 class="gymnasium-lookup-header">Se hvordan dit lokale gymnasium er påvirket</h2>
+
+        <div data-gymnasium-lookup="https://dr-json-data.s3.eu-west-1.amazonaws.com/c8476d528050dd4496dcde1660323d96-gymnasiebemanding-sheet1.json"
+            data-lookup-placeholder="Søg på gymnasiets navn" data-container="gymnasium-dict-wrapper" data-tip="">
             <div data-lookup-about>
-                <h3>Om EP-ordbogen</h3>
-                <p>EP-ordbogen er lavet af Simone C. Møller, Per Bang Thomsen og Johs. Wehner.</p>
-                <p>Hvis du synes, der mangler et ord, så skriv til <a href="mailto:THTP@dr.dk">Per Bang Thomsen</a></p>
+                <h3>Om denne boks</h3>
+                <p>Gymnasium-opslaget er lavet af Mads Rafte Hein og Johs. Wehner.</p>
+                <p>Der er tale om antal lærerårsværk og antal årselever. Et lærerårsværk dækker både over timelønnede og
+                    fastansatte
+                    lærere. Mindre faggrupper, der også kan undervise på gymnasiet, er ikke talt med. En årselev er en
+                    elev, der modtager 40
+                    ugers fuldtidsundervisning.</p>
+                <p>Kilde: Undervisningsministeriet og Gymnasieskolernes Lærerforening.</p>
             </div>
 
         </div>
     </div>
-
     <script src="./index.js"></script>
-    <link rel="stylesheet" href="https://www.dr.dk/nyheder/htm/grafik/2019/ep-dictionary/style.css">
+
 </body>
+
 </html>

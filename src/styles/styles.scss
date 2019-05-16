@@ -111,3 +111,129 @@
         }
     }
 }
+
+
+
+
+.gymnasium-lookup, [data-lookup-about] {
+    background: #f6f6f6;
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.gymnasium-lookup-header {
+    font-family: gibsonLight, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 38px;
+    line-height: 38px;
+    color:#333;
+    text-align: center;
+    max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gymnasium-lookup-label {
+    font-family: gibsonRegular, Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color:#fff;
+}
+
+.gymnasium-lookup .dict-result {
+    color: #565656;
+    text-align: center;
+    h4 {
+        color: #565656;
+        font-family: gibsonSemibold, Arial, sans-serif;
+        font-size: 30px;
+        font-weight: 100;
+        line-height: 1.1;
+    }
+    .stats-line {
+        margin: 20px 0 50px;
+    }
+    .stats-line-label {
+        font-family: gibsonRegular, Arial, sans-serif;
+        font-size: 24px;
+        color: #565656;
+        margin: 0;
+    }
+    .stats-line-digit {
+        font-size: 58px;
+        font-family: gibsonLight, Arial, sans-serif;
+        line-height: 1;
+    }
+    .stats-line-info {
+        font-family: gibsonRegular, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 0.2;
+        color: #999
+    }
+    .stats-footnotes p {
+        max-width: 560px;
+        line-height: 1.2;
+        margin: 0 auto 10px;
+        font-family: gibsonRegular, Arial, sans-serif;
+        font-size: 14px;
+        color: #747474
+
+    }
+}
+.gymnasium-lookup .dict-tip {
+    color: #fff;
+    text-align: center;
+
+}
+.gymnasium-lookup .dict-result p {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+}
+.gymnasium-lookup .dict-restart {
+    width: 50px;
+    height: 50px;
+    fill: #fff;
+    margin: 0 auto;
+    background: #6695cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%
+}
+.gymnasium-lookup .dict-restart svg {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -2px;
+}
+.gymnasium-lookup .dict-info-link {
+    fill: #333;
+}
+.gymnasium-lookup [data-lookup-about] {
+    color: #333;
+}
+.gymnasium-lookup [data-lookup-about] h3 {
+    font-size: 18px;
+}
+
+.gymnasium-lookup [data-lookup-about] p {
+    font-size: 14px;
+    max-width: 600px;
+}
+
+.gymnasium-lookup [data-lookup-about] a {
+    color: #fff;
+}
+
+.stats-direction-arrow {
+    width: auto;
+    height: 40px;
+}
+.arrow-line{fill:none;stroke:#00ad00;stroke-miterlimit:10;}
+
+.arrow-up .stats-direction-arrow {
+    transform: rotate(180deg);
+    .arrow-line{stroke:#FF001E;}
+}

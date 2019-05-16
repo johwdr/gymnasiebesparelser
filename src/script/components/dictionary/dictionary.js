@@ -221,16 +221,57 @@ export default class Dictionary {
         const index = event.target.dataset.index;
         this.select(this.list[index]);
     }
+
+    isNegative(val) {
+
+        return val.indexOf('-') < 0;
+    }
+    directionText(val) {
+
+        return (val.indexOf('-') < 0) ? 'flere': 'færre';
+    }
     select(item) {
 
+        const arrow = `<svg class="stats-direction-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.93 41.7"><g id="Layer_2" data-name="Layer 2"><g id="tekst"><line class="arrow-line" x1="12.97" y1="1.28" x2="12.97" y2="41.7"/><polyline class="arrow-line" points="0.35 13.32 12.97 0.71 25.58 13.32"/></g></g></svg>`
+
+        let teacherpctArrow = this.isNegative(item['teacherpct']) ? 'arrow-down': 'arrow-up';
+        let studentpctArrow = this.isNegative(item['studentpct']) ? 'arrow-down' : 'arrow-up';
+        let ratiopctArrow = this.isNegative(item['ratiopct']) ? 'arrow-down' : 'arrow-up';
+
+
+        let teacherDirection = this.directionText(item['teacherpct']);
+        let studentDirection = this.directionText(item['studentpct']);
+        let ratioDirection = this.directionText(item['ratiopct']);
 
         this.tip.style.display = 'none';
         this.input.value = ''
         this.listElement.innerHTML = '';
         this.resultElement.innerHTML = `
             <h4>${item['school']}</h4>
-            <p>Lærerandelen er faldet med: ${item['ratiopct']}</p>
-        `;
+            <div class="stats-line">
+
+                <div class="stats-line-digit ${teacherpctArrow}"><span class="stats-digit-wrapper">${item['teacherpct']}</span> ${arrow}</div>
+                <p class="stats-line-label">${teacherDirection} lærere</p>
+                <p class="stats-line-info">(Hele landet: -9%)</p>
+            </div>
+            <div class="stats-line">
+
+                <div class="stats-line-digit ${studentpctArrow}"><span class="stats-digit-wrapper">${item['studentpct']}</span> ${arrow}</div>
+                <p class="stats-line-label">${studentDirection} elever</p>
+                <p class="stats-line-info">(Hele landet: -1%)</p>
+            </div>
+            <div class="stats-line">
+
+                <div class="stats-line-digit ${ratiopctArrow}"><span class="stats-digit-wrapper">${item['ratiopct']}</span> ${arrow}</div>
+                <p class="stats-line-label">${ratioDirection} lærere pr elev:</p>
+                <p class="stats-line-info">(Hele landet: -8%)</p>
+            </div>
+            <div class="stats-footnotes">
+                <p>Der er tale om antal lærerårsværk og antal årselever. Et lærerårsværk dækker både over timelønnede og fastansatte lærere. Mindre faggrupper, der også kan undervise på gymnasiet, er ikke talt med. En årselev er en elev, der modtager 40 ugers fuldtidsundervisning.</p>
+                <p>Kilde: Undervisningsministeriet og Gymnasieskolernes Lærerforening.</p>
+
+            </div>
+        `;/*
         if (!this.restart) {
             this.restart = document.createElement('a');
 
@@ -248,7 +289,7 @@ export default class Dictionary {
                 this.tip.style.visibility = 'visible';
             })
             this.wrapper.appendChild(this.restart);
-        }
+        }*/
 
     }
 }

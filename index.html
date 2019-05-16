@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Parceljs Boilerplates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
+
 <body>
 
     <div id="gymnasium-dict-wrapper" class="gymnasium-lookup">
         <h2 class="gymnasium-lookup-header">Se hvordan dit lokale gymnasium er påvirket</h2>
-        <div class="gymnasium-lookup-label">Søg gymnasiets navn nedenfor</div>
-        <div
-            data-gymnasium-lookup="https://dr-json-data.s3.eu-west-1.amazonaws.com/c8476d528050dd4496dcde1660323d96-gymnasiebemanding-sheet1.json"
-            data-lookup-placeholder="fx Haderslev Katedralskole"
-            data-container="gymnasium-dict-wrapper"
-            data-tip="Det kan også være ord som 'Parlamentet', 'Euro' eller 'Traktat'">
+
+        <div data-gymnasium-lookup="https://dr-json-data.s3.eu-west-1.amazonaws.com/c8476d528050dd4496dcde1660323d96-gymnasiebemanding-sheet1.json"
+            data-lookup-placeholder="Søg på gymnasiets navn" data-container="gymnasium-dict-wrapper"
+            data-tip="">
             <div data-lookup-about>
-                <h3>Om gymnasie-boksen</h3>
-                <p>Gymnasium-opslaget er lavet af Simone C. Møller, Mads Rafte Hein og Johs. Wehner.</p>
+                <h3>Om denne boks</h3>
+                <p>Gymnasium-opslaget er lavet af Mads Rafte Hein og Johs. Wehner.</p>
+                <p>Der er tale om antal lærerårsværk og antal årselever. Et lærerårsværk dækker både over timelønnede og fastansatte
+                lærere. Mindre faggrupper, der også kan undervise på gymnasiet, er ikke talt med. En årselev er en elev, der modtager 40
+                ugers fuldtidsundervisning.</p>
+                <p>Kilde: Undervisningsministeriet og Gymnasieskolernes Lærerforening.</p>
             </div>
 
         </div>
@@ -24,4 +30,5 @@
     <script src="./src/script/index.js"></script>
 
 </body>
+
 </html>
